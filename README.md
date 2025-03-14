@@ -2,7 +2,7 @@
 
 ## Overview
 
-TrackManMobileAppTest is a mobile test automation framework designed to verify the functionality of creating a planned round in the **TrackMan Mobile App**. This project follows the **Page Object Model (POM)** design pattern to enhance the maintainability and scalability of the test scripts.
+TrackManMobileAppTest is a mobile test automation framework designed to verify the functionality of creating a planned round in the **TrackMan Mobile App**. This project follows the **Page Object Model (POM)** design pattern to enhance the maintainability and scalability of the test script.
 
 ## Project Structure
 
