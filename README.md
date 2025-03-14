@@ -92,7 +92,7 @@ mvn -Dtest=PlannedRoundCreationTest test
  - The app has been successfully tested on a real Android device.
  - Device Name: Vivo
  - Android Version: 12
-   All test steps have passed successfully.
+ - All test steps have passed successfully.
 
 
 
