@@ -1,4 +1,4 @@
-# TrackMan Mobile App Test
+# TrackMan Mobile App Test Automation Framework
 
 ## Overview
 
