@@ -6,7 +6,7 @@ TrackManMobileAppTest is a mobile test automation framework designed to verify t
 
 ## Project Structure
 
-### 1. Base Layer (Core Utilities & Management)
+### 1. Base Layer
 This layer contains core files responsible for managing the driver, base classes, and test execution:
 - **DriverManager.java**: Manages the Appium driver.
 - **BaseClass.java**: Contains common functionalities for the test execution.
