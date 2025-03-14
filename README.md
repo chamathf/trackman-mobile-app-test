@@ -83,11 +83,7 @@ Before running the tests, **connect your real Android device** and specify the d
   appium
   
 ## Running Tests
-To execute tests, use:
-```sh
-mvn test
-```
-Or, to run a specific test class:
+To execute test, use:
 ```sh
 mvn -Dtest=PlannedRoundCreationTest test
 ```
