@@ -75,6 +75,8 @@ Before running the tests, **connect your real Android device** and specify the d
   adb devices
 - Set Device Capabilities in the config.properties File
 - Start the Appium Server
+  ```sh
+  appium
   
 ## Running Tests
 To execute tests, use:
