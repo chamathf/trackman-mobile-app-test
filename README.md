@@ -41,11 +41,12 @@ This layer includes configuration files for logging, reading properties, and oth
 ### Prerequisites
 
 Ensure you have the following installed on your system:
-1. **Java JDK 11+**
+1. **Java**
 2. **Maven**
-3. **Appium Server**
-4. **Real Android Device** (Tested on **Vivo** device)
-5. **TrackMan Mobile App** installed on the device
+3. **TestNG**
+4. **Appium Server**
+5. **Real Android Device** (Tested on **Vivo** device)
+6. **TrackMan Mobile App** installed on the device
 
 ### Installation Steps
 
