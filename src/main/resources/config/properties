@@ -1,0 +1,11 @@
+# Appium Server
+appium.server=http://127.0.0.1:4723/
+
+# Android Capabilities
+mobile.platform=Android
+android.deviceName=10HD5Y07RE0052S
+android.appPackage=dk.TrackMan.Range
+android.automationName=UiAutomator2
+android.appActivity=dk.TrackMan.SplashScreen
+android.noReset=true
+android.platformVersion=12
