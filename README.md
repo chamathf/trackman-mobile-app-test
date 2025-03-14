@@ -27,6 +27,10 @@ This layer includes configuration files for logging, reading properties, and oth
 - **ConfigReader.java**: Reads configuration values from the properties file.
 - **Properties files**: Stores Device Capabilities.
 
+### 4. Test Data
+This layer includes Test Data
+- **Constants.java** 
+
 ## Technologies Used
 
 - **Programming Language**: Java
