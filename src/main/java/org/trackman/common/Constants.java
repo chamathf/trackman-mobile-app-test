@@ -11,6 +11,8 @@ public class Constants {
     // Course Settings
     public static final String COURSE_NAME = System.getProperty("course.name", "Achimer Golfclub 18-hole course");
 
+    // Round Name
+    public static final String ROUND_NAME = System.getProperty("round.name", "Chamath Test");
     // Tee Settings
     public static final String MALE_TEE = System.getProperty("tee.male", "White");
     public static final String FEMALE_TEE = System.getProperty("tee.female", "Blue");

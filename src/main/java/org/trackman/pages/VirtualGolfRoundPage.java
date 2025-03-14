@@ -47,10 +47,13 @@ public class VirtualGolfRoundPage {
 
     private static final String STIMP_BUTTON = "//android.widget.TextView[@resource-id=\"dk.TrackMan.Range:id/titleTextView\" and @text=\"%s\"]";
 
-    private static final By SAVE_ROUND_BUTTON = By.id("dk.TrackMan.Range:id/saveButton");
+    private By saveRoundButton = By.id("dk.TrackMan.Range:id/saveButton");
 
-    private static final By GOLF_COURSE_NAME = By.id("dk.TrackMan.Range:id/courseNameTextView");
+    private By golfCourseName = By.id("dk.TrackMan.Range:id/courseNameTextView");
 
+    private By roundNameSearchBar = By.id("dk.TrackMan.Range:id/roundNameEditText");
+
+    private static final String ROUND_NAME_TITLE = "//android.widget.TextView[@resource-id=\"dk.TrackMan.Range:id/roundNameTextView\" and @text=\"%s\"]";
     private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
     private static final By BACK_KEY = By.id("dk.TrackMan.Range:id/closeButtonImageView");
@@ -178,18 +181,37 @@ public class VirtualGolfRoundPage {
     // Method to click save round button
     public void clickSaveRoundButton() {
 
-        driver.findElement(SAVE_ROUND_BUTTON).click();
+        driver.findElement(saveRoundButton).click();
         logger.info("Clicked Save Round Button");
     }
 
     // Method to return selected visible golf course name text
     public String getGolfCourseNameText() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement golfCourseElement = wait.until(ExpectedConditions.visibilityOfElementLocated(GOLF_COURSE_NAME));
+        WebElement golfCourseElement = wait.until(ExpectedConditions.visibilityOfElementLocated(golfCourseName));
         String golfCourseNameText = golfCourseElement.getText();
         logger.info("Golf Course Name text: " + golfCourseNameText);
         return golfCourseNameText;
     }
+
+    // Method to return round name text
+    public String getRoundNameText(String name) {
+        By getRoundNameTitle = By.xpath(String.format(ROUND_NAME_TITLE, name));
+        WebElement roundNameTitleElement = driver.findElement(getRoundNameTitle);
+        String roundNameText = roundNameTitleElement.getText();
+        logger.info("Get Round Name text: " + roundNameText);
+        return roundNameText;
+    }
+
+    // Method for enter round name
+    public void enterRoundName(String name) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement roundNameTextFieldElement = wait.until(ExpectedConditions.visibilityOfElementLocated(roundNameSearchBar));
+        roundNameTextFieldElement.clear();
+        roundNameTextFieldElement.sendKeys(name);
+        logger.info("Entered the Round Name : " + name);
+    }
+
 
     // Method to return selected visible hole name text
     public String getHoleNameText(String holes) {

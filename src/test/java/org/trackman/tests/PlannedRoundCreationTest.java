@@ -39,6 +39,7 @@ public class PlannedRoundCreationTest extends BaseTest {
         myPlannedRoundPage.searchCourses(Constants.COURSE_NAME);
         myPlannedRoundPage.selectCourse();
         myPlannedRoundPage.clickPlanVirtualGolfRound();
+        virtualGolfRoundPage.enterRoundName(Constants.ROUND_NAME);
         virtualGolfRoundPage.selectMaleTee(Constants.MALE_TEE);
         virtualGolfRoundPage.selectFemaleTee(Constants.FEMALE_TEE);
         virtualGolfRoundPage.scrollDown();
@@ -58,6 +59,9 @@ public class PlannedRoundCreationTest extends BaseTest {
         // Verify the golf course name displayed on the virtual golf round page
         String golfCourseNameText = virtualGolfRoundPage.getGolfCourseNameText();
         softAssert.assertEquals(golfCourseNameText, Constants.COURSE_NAME, "Golf course name does not match the expected value in virtual golf round page.");
+
+        String roundNameText = virtualGolfRoundPage.getRoundNameText(Constants.ROUND_NAME);
+        softAssert.assertEquals(roundNameText, Constants.ROUND_NAME, "Round name does not match the expected value in virtual golf round page.");
 
         // Verify the hole name displayed on the virtual golf round page
         String holeNameText = virtualGolfRoundPage.getHoleNameText(Constants.HOLES);
